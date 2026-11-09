@@ -21,7 +21,7 @@ Code Map 是一个面向 AI Coding Agent（如 Codex、Claude Code、Cursor、Wo
 - **右栏 · 节点深度卡片**：聚焦“设计意图、实现细节、避坑指南”，支持按类型（新增/调整/测试/复用）过滤。
 - **三方联动体系**：在任意一栏点击节点，另外两栏同步聚焦并高亮，辅以动态 SVG 连线直达目标。
 - **主线故事导览（TOUR）**：顶部站点导航条预设 6~10 个关键站点，串联完整业务故事，无需阅读全量代码即可理清主脉络。
-- **零外部依赖交付**：内嵌离线 Mermaid 引擎，单文件 HTML 双击即开，离线可用，方便评审演示与沉淀入库。
+- **双模弹性交付**：优先加载公共 CDN 引擎（日常生成无需拷贝 vendor 目录，实现真正的轻量单文件）；无网或隔离环境下自动回滚加载本地离线引擎，双击即开，兼具轻量与确定性。
 
 > **产物语言规则**：地图中的展示文本（节点名称、解析卡片、导览文案）**遵循用户 Agent 的当前语言环境与对话偏好**，支持中文、英文等任意语言输出，不作硬性限制。
 
@@ -127,11 +127,13 @@ cp -r code-map-skills ~/.agents/skills/
 
 无需 Agent 亦可手动生成或调试地图：
 
-1. 拷贝模板与资源库：
+1. 拷贝模板（联网场景下仅需复制单个 HTML 文件即可运行）：
    ```bash
-   mkdir -p docs/code-map/my-feature/vendor
+   mkdir -p docs/code-map/my-feature
    cp assets/code-map-template.html docs/code-map/my-feature/index.html
-   cp assets/vendor/mermaid.min.js docs/code-map/my-feature/vendor/
+
+   # 可选：若需在完全无网或隔离内网环境下交付，可拷贝离线 vendor 目录提供本地兜底
+   # cp -r assets/vendor docs/code-map/my-feature/vendor
    ```
 2. 参考 `references/data-spec.md` 替换 `index.html` 中的 `MAP-DATA-START` 至 `MAP-DATA-END` 区间。
 3. 运行静态一致性校验：
