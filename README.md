@@ -15,7 +15,7 @@ Given codebase context—whether a recent Git diff, a feature PRD, or an unfamil
 │       LEFT PANEL        │               CENTER PANEL                │       RIGHT PANEL       │
 │      Project Tree       │          Tri-Diagram Dashboard            │     Deep-Dive Cards     │
 │                         │                                           │                         │
-│  IDE-style tree view    │  🗺 Overview (flowchart LR)               │  Architectural intent   │
+│  IDE-style tree view    │  🗺 Overview (flowchart LR)                │  Architectural intent   │
 │  • Instant search       │  ⏱ Sequence (sequenceDiagram)             │  • "Why it exists"      │
 │  • Fold/expand toggles  │  🔀 Workflow (flowchart TB)               │  • Core algorithms      │
 │  • Status badges        │  🧭 Guided Tour Rail (6~10 stations)      │  • Concurrency/pitfalls │
