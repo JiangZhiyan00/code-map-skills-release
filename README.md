@@ -2,6 +2,10 @@
 
 > **Turn complex codebases and system workflows into interactive, self-contained single-file HTML code maps.**
 
+<p align="center">
+  <img src="assets/images/code-map.png" alt="Code Map Cover" width="480">
+</p>
+
 Code Map is an engineering-grade visualization skill designed for AI Coding Agents (such as Codex, Claude Code, Cursor, OpenCodeInterpreter, Gemini CLI, etc.) and software engineers.
 
 Given codebase context—whether a recent Git diff, a feature PRD, or an unfamiliar repository—Code Map produces an **interactive, self-contained, single-file HTML panorama**. Readers can follow a guided narrative walkthrough or click any symbol to see the project structure tree, Mermaid diagrams, and deep-dive documentation cards synchronize with dynamic animated connectors. No server setup or complex dependencies required: simply double-click to open in any modern browser.
@@ -130,6 +134,8 @@ code-map-skills/
 ├── README.md                     # Project documentation and user guide
 ├── LICENSE                       # MIT License (v1.0.0)
 ├── assets/
+│   ├── images/
+│   │   └── code-map.png          # Skill cover illustration
 │   ├── code-map-template.html    # Base HTML template with built-in i18n engine
 │   └── vendor/mermaid.min.js     # Standalone Mermaid engine source (used by inline-engine.js)
 ├── references/
